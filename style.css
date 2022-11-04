@@ -25,6 +25,7 @@
     justify-items: center;
   }
 
+
   nav {
     display: flex;
     align-items: center;
@@ -162,6 +163,10 @@
     height: 260px;
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .project-img:hover{
+    transform: scale(1.2);
   }
 
   .text {
