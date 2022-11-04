@@ -166,7 +166,7 @@
   }
 
   .project-img:hover{
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 
   .text {
@@ -399,6 +399,7 @@
     height: 40px;
     order: 1;
   }
+  
 
   .tag1 {
     padding: 5px;
