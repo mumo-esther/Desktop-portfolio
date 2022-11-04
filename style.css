@@ -6,12 +6,10 @@
   .body {
     display: flex;
     margin-top: 35px;
-    max-width: 1000px;
     margin-left: 20px;
     margin-right: 20px;
     width: auto;
     height: auto;
-    margin: auto;
   }
 
   .hero {
@@ -246,11 +244,13 @@
     bottom: 4px;
     background-color: rgb(255, 255, 255);
   }
-.about-me{
+
+  .about-me {
     width: auto;
     height: auto;
     position: absolute;
-}
+  }
+
   .about-myself {
     display: flex;
     flex-direction: column;
@@ -279,7 +279,6 @@
 
   .form-images {
     position: absolute;
-
   }
 
   .img3 {
@@ -464,7 +463,7 @@
     padding: 20px;
     gap: 12px;
     position: absolute;
-   width: auto;
+    width: auto;
     margin-left: 80px;
     margin-right: 80px;
     height: auto;
