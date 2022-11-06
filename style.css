@@ -250,9 +250,10 @@
   }
 
   .about-me {
-    width: auto;
-    height: auto;
-    position: absolute;
+    margin-top: 2em;
+    background: url(./images/frame4.png) no-repeat 100% 0%, url(./images/frame5.png) no-repeat 0 300px;
+    text-align: center;
+    padding: 2em;
   }
 
   .about-myself {
@@ -265,20 +266,28 @@
 
   .about-imgs {
     position: absolute;
+    width: 1542px;
+    height: 331px;
+    left: -53px;
+    top: 2307px;
   }
 
   .img1 {
-    margin-left: 130%;
-    right: -97.92%;
-    top: 0.09%;
-    bottom: 0%;
-    width: 150px;
+    position: absolute;
+    width: 289px;
+    height: 146px;
+    left: -53px;
+    top: 2492px;
   }
 
   .img2 {
-    margin-left: -90%;
-    right: 87.2%;
-    margin-top: -74.83%;
+    position: absolute;
+    width: 273px;
+    height: 245px;
+    left: 1489px;
+    top: 2307px;
+    
+    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
   .form-images {
@@ -459,42 +468,45 @@
     padding-right: 2rem;
   }
 
-  .contact-form {
+  .footer-container {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    /* prettier-ignore */
+    background: url(./images/frame3.png) no-repeat 0% 90%, url(./images/frame2.png) no-repeat 30% 90%, url(./images/frame1.png) no-repeat 100% 90%;
+  }
+
+  .footer-form {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px;
-    gap: 12px;
-    position: absolute;
-    width: auto;
-    margin-left: 80px;
-    margin-right: 80px;
-    height: auto;
+    text-align: left;
   }
 
-  .form-text {
-    align-items: center;
-    text-align: center;
+  .input-name {
+    display: none;
   }
 
-  .form-text > h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 30px;
-    line-height: 52px;
+  .input-full-name {
     display: flex;
-    align-items: center;
-    color: #172b4d;
+    justify-content: space-between;
+    padding: 0;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    height: 330px;
-    flex: none;
-    order: 1;
+  .input-full-name,
+  .input-email,
+  textarea {
+    min-width: 327px;
+    width: calc(95vw - 684px);
+  }
+
+  .input-full-name input {
+    max-width: 48%;
+    min-width: 48%;
+    width: inherit;
+  }
+
+  textarea {
+    height: 114px;
   }
 
   ul {
@@ -540,15 +552,7 @@
     margin-top: 20px;
   }
 
-  .social-media-footer {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    column-gap: 25px;
-    justify-content: center;
-    padding: 0.5rem;
-    height: 50px;
-    margin-top: 400px;
-    margin-bottom: -90%;
+  .footer-container > .social-media {
+    margin-top: 18em;
   }
 }
