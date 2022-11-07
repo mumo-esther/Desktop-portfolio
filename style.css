@@ -286,7 +286,6 @@
     height: 245px;
     left: 1489px;
     top: 2307px;
-    
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
@@ -499,6 +498,13 @@
     width: calc(95vw - 684px);
   }
 
+  input {
+    font: 1em "inter", sans-serif;
+    width: 450px;
+    height: 48px;
+    box-sizing: border-box;
+  }
+
   .input-full-name input {
     max-width: 48%;
     min-width: 48%;
@@ -516,23 +522,7 @@
   form li + li {
     margin-top: 1em;
   }
-
-  input {
-    font: 1em "inter", sans-serif;
-    width: 450px;
-    height: 48px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    font: 1em "inter", sans-serif;
-    width: 450px;
-    box-sizing: border-box;
-    border: 1px solid green;
-    vertical-align: top;
-    height: 114px;
-  }
-
+  
   input:focus:valid,
   textarea:focus:valid {
     border-color: blue;
