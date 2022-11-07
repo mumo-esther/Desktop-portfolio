@@ -272,23 +272,20 @@
   .form-images {
     position: absolute;
     width: 100%;
-    padding: 50px;
     height: auto;
   }
 
   .img3 {
     float: right;
-    margin-right: -8%;
   }
 
   .img4 {
-    margin-top: 40%;
+    margin-top: 50%;
   }
 
   .img5 {
     float: left;
-    margin-left: -10%;
-    margin-top: 18%;
+    margin-top: 20%;
   }
 
   .about-content {
@@ -311,7 +308,6 @@
     padding: 10px;
     margin-right: 50px;
     margin-left: 50px;
-    width: 75%;
   }
 
   .contact-text {
@@ -323,6 +319,7 @@
     line-height: 32px;
     text-align: center;
     color: #172b4d;
+    width: 65%;
   }
 
   .social-media {
@@ -478,6 +475,8 @@
     display: flex;
     align-items: center;
     color: #172b4d;
+    width: 80%;
+    margin-left: auto;
   }
 
   form {
@@ -487,6 +486,7 @@
     gap: 24px;
     height: 330px;
     flex: none;
+    margin-right: 90px;
   }
 
   ul {
@@ -835,6 +835,7 @@
     line-height: 32px;
     text-align: center;
     color: #172b4d;
+    width: 75%;
   }
 
   .social-media {
