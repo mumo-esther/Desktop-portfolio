@@ -514,7 +514,7 @@
   textarea {
     height: 114px;
   }
-
+  
   ul {
     list-style: none;
   }
@@ -522,7 +522,7 @@
   form li + li {
     margin-top: 1em;
   }
-  
+
   input:focus:valid,
   textarea:focus:valid {
     border-color: blue;
