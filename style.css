@@ -168,8 +168,10 @@ button:active {
 
 .headline {
   background: #fff url(./images/background.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   overflow: hidden;
+  position: relative;
+  background-position: center;
 }
 
 .headline h1:first-child {
@@ -743,13 +745,19 @@ footer::after {
 }
 
 @media screen and (max-width: 767px) {
-  .card-categories {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    width: auto;
+  .about-myself {
+    background:
+      url(./images/frame5.png) no-repeat 0% 15%,
+      url(./images/frame4.png) no-repeat 100% 0%;
+    background-size: 150px, 150px;
   }
 
   .categorie-about-myself {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .works {
     display: grid;
     grid-template-columns: repeat(1, auto);
   }
