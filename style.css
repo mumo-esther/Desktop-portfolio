@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
 html,
 body {
@@ -8,18 +8,18 @@ body {
 
   --shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.8);
   --shadow-accent: 0 2px 50px -1px rgba(0, 0, 0, 0.8);
-  --color-primary: #36B37F;
+  --color-primary: #36b37f;
 }
 
 body {
   display: block;
   background: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Tipography */
 h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -158,7 +158,7 @@ button:active {
 
 .header-logo {
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -240,11 +240,12 @@ button:active {
   }
 
   .about-myself {
-    background: url(./images/frame5.png) no-repeat 0% 20%, url(./images/frame4.png) no-repeat 100% 0%;
+    background:
+      url(./images/frame5.png) no-repeat 0% 20%,
+      url(./images/frame4.png) no-repeat 100% 0%;
   }
 }
 
-/* Card works group */
 .works {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -253,7 +254,6 @@ button:active {
   column-gap: 2rem;
   width: 90%;
   margin: 0 auto;
-  background-color: blue;
 }
 
 .works h1:first-child {
@@ -261,7 +261,7 @@ button:active {
 }
 
 .works h1:first-child::after {
-  content: '';
+  content: "";
   height: 4px;
   width: 48px;
   margin: 0 auto;
@@ -286,7 +286,6 @@ button:active {
   border: 1px lightgrey solid;
   border-radius: 5px;
   transition: box-shadow 0.4s ease-out;
-  background-color: red;
 }
 
 .card-work:hover {
@@ -297,7 +296,7 @@ button:active {
   overflow: hidden;
   box-sizing: border-box;
   height: 252px;
-  background-color: gray;
+  background-color: #ebf0ee;
 }
 
 .card-image img {
@@ -309,21 +308,21 @@ button:active {
 .card-tags,
 .categorie-tags {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: space-around;
 }
 
 .card-work > .card-tags > li {
-  background: lightgray;
+  background: #ebf0ee;
   font-size: 12px;
-  padding: 0.5em;
+  padding: 1em;
   margin: 0 0.5em;
   border-radius: 2px;
 }
 
 .card-work-details-mobile {
   display: grid;
+  grid-template-columns: repeat(1, auto);
   padding: 16px;
   font-size: 16px;
   background: #fff;
@@ -365,7 +364,9 @@ button:active {
   font-weight: 600;
   font-size: 1.5em;
   color: #172b4d;
-  text-align: left;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
 }
 
 .card-tags-mobile {
@@ -424,11 +425,6 @@ button:active {
 }
 
 @media (min-width: 800px) {
-  /* .works {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px repeat(3, 1fr); 
-  }*/
-
   .works h1:first-child {
     align-self: flex-end;
     padding: 1em;
@@ -456,8 +452,7 @@ button:active {
 
   .card-work-details-mobile {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 60px;
-    grid-template-rows: 60px 50% 1fr 60px 1fr;
+    grid-template-columns: repeat(3, auto);
   }
 
   .btn-close-details {
@@ -497,19 +492,12 @@ button:active {
 }
 
 @media (min-width: 1150px) {
-  /* .works {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px repeat(2, 1fr);
-  } */
-
   .works h1:first-child {
     padding: 1em;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
   }
 }
-
-/* About me */
 
 .about-myself {
   margin-top: 2em;
@@ -534,12 +522,10 @@ button:active {
   align-items: center;
   padding: 0;
   display: grid;
-  background-color: red;
 }
 
 .card-categories {
   display: flex;
-  background-color: blue;
   flex-direction: column;
   justify-content: flex-start;
   padding: 30px 0 0 0;
@@ -584,22 +570,14 @@ button:active {
   align-items: center;
 }
 
-
-
 @media (min-width: 768px) {
-  /* .categorie-about-myself {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 90%;
-  } */
-
   .about-myself {
-    background: url(./images/frame5.png) no-repeat 0% 20%, url(./images/frame4.png) no-repeat 100% 0%;
+    background:
+      url(./images/frame5.png) no-repeat 0% 20%,
+      url(./images/frame4.png) no-repeat 100% 0%;
   }
 }
 
-/* Footer section */
 .footer-container {
   margin-top: 2em;
   display: flex;
@@ -687,7 +665,7 @@ textarea:valid {
 }
 
 footer::after {
-  content: '';
+  content: "";
   height: 4px;
   width: 150px;
   margin: 0 auto;
@@ -761,5 +739,18 @@ footer::after {
 
   .submit-button {
     align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-categories {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    width: auto;
+  }
+
+  .categorie-about-myself {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
   }
 }
