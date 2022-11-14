@@ -1,9 +1,11 @@
 [](https://img.shields.io/badge/Microverse-blueviolet)
 
-#   Desktop version Portfolio
+#    Portfolio Deployment in Github pages
 
-> The project is aimed at making a desktop responsive potfolio
+> The project is aimed at making the portfolio available online.
 
+## Link to online version of my portfolio
+https://mumo-esther.github.io/Desktop-portfolio/
 
 ## Built With
 
