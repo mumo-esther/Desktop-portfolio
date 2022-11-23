@@ -6,20 +6,20 @@ body {
   padding: 0;
   padding-bottom: 2em;
 
-  --shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.8);
-  --shadow-accent: 0 2px 50px -1px rgba(0, 0, 0, 0.8);
+  --shadow: 0 2px 10px -1px rgb(0 0 0 / 80%);
+  --shadow-accent: 0 2px 50px -1px rgb(0 0 0 / 80%);
   --color-primary: #36b37f;
 }
 
 body {
   display: block;
   background: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: inter, sans-serif;
 }
 
 /* Tipography */
 h1 {
-  font-family: "Inter", sans-serif;
+  font-family: inter, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -67,7 +67,7 @@ button {
 }
 
 button:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  box-shadow: 0 8px 16px rgb(54 179 127 / 24%);
 }
 
 button:active {
@@ -92,42 +92,35 @@ button:active {
 }
 
 .header-nav-phone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: none;
+  z-index: 100;
   padding: 0 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-nav-mobile {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  color: #3a4a42;
-  border: 1px lightgrey solid;
-  border-radius: 5px;
-}
-
 .menu-btn,
-.header-nav-mobile > button {
+.nav-menu > button {
   background-color: white;
+  margin-right: 40px;
 }
 
-.header-nav-mobile > button {
-  margin: 0.5em 0.5em;
+.nav-menu > button {
+  margin: 0.5em;
   align-self: flex-end;
   cursor: pointer;
 }
 
-.header-nav-mobile > img {
+.nav-menu > img {
   width: 2em;
 }
 
-.header-nav-mobile > ul > li {
+.nav-menu > ul > li {
   margin-left: 28px;
   margin-top: 40px;
   font-size: 24px;
@@ -135,7 +128,7 @@ button:active {
   cursor: pointer;
 }
 
-.header-nav-mobile > ul > li > a {
+.nav-menu > ul > li > a {
   font-size: 24px;
   font-weight: 600;
   color: #3a4a42;
@@ -148,17 +141,43 @@ button:active {
   color: var(--color-primary);
 }
 
-.menu-btn.hidden {
-  display: none;
+.btn-close-nav {
+  position: absolute;
+  font-size: 30px;
+  right: 48px;
+  top: 20px;
 }
 
-.header-nav-mobile.hidden {
-  display: none;
+.nav-menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: -100%;
+  background-color: #fff;
+  backdrop-filter: blur(8px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
 }
+
+.show {
+  left: 0;
+}
+
+/* .menu-btn.hidden {
+  display: none;
+} */
+
+/* .nav-menu.hidden {
+  display: none;
+} */
 
 .header-logo {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+  font-family: inter, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -167,15 +186,14 @@ button:active {
 }
 
 .headline {
-  background: #fff url(./images/background.png) no-repeat;
+  background: #fff url("./images/background.png") no-repeat;
   background-size: cover;
   overflow: hidden;
-  position: relative;
   background-position: center;
 }
 
-.headline h1:first-child {
-  margin-top: 1.5em;
+.headline h1 {
+  margin-top: 150px;
 }
 
 .headline p {
@@ -201,7 +219,11 @@ button:active {
 }
 
 @media (min-width: 992px) {
-  .header-nav-phone {
+  .menu-btn {
+    display: none;
+  }
+
+  .header-logo {
     display: none;
   }
 
@@ -210,27 +232,27 @@ button:active {
   }
 
   .header-nav-desktop {
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     padding: 0;
     padding-top: 1em;
-    margin: 0;
+    margin-left: 500px;
   }
 
   .header-nav-desktop li {
     list-style: none;
     padding: 0;
-    margin: 1em;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 42px;
     font-weight: bold;
     color: #42526e;
     cursor: pointer;
   }
 
   .headline {
-    background: #fff url(./images/background.png) no-repeat;
+    background: #fff url("./images/background.png") no-repeat;
     background-size: 100%;
     padding-bottom: 8em;
   }
@@ -243,8 +265,8 @@ button:active {
 
   .about-myself {
     background:
-      url(./images/frame5.png) no-repeat 0% 20%,
-      url(./images/frame4.png) no-repeat 100% 0%;
+      url("./images/frame5.png") no-repeat 0% 20%,
+      url("./images/frame4.png") no-repeat 100% 0%;
   }
 }
 
@@ -381,14 +403,14 @@ button:active {
 .tag-mobile {
   background: #ebf0ee;
   color: #3a4a42;
-  padding: 0.5em 0.75em 0.5em;
+  padding: 0.5em 0.75em;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 0.75em;
   line-height: 1em;
   letter-spacing: 0.03em;
-  border-radius: 0.25em;
+  border-radius: 25em;
 }
 
 .card-paragraph-mobile {
@@ -505,7 +527,7 @@ button:active {
   margin-top: 2em;
 
   /* prettier-ignore */
-  background: url(./assest/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assest/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
+  background: url("./assest/illustration_1-about_me-mobile.svg") no-repeat 100% 0%, url("./assest/illustration_2-about_me_mobile.svg") no-repeat 0 300px;
   text-align: center;
   padding: 2em;
 }
@@ -530,7 +552,7 @@ button:active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 30px 0 0 0;
+  padding: 30px 0 0;
   margin-bottom: 2em;
   height: 352px;
   width: 327px;
@@ -575,8 +597,8 @@ button:active {
 @media (min-width: 768px) {
   .about-myself {
     background:
-      url(./images/frame5.png) no-repeat 0% 20%,
-      url(./images/frame4.png) no-repeat 100% 0%;
+      url("./images/frame5.png") no-repeat 0% 20%,
+      url("./images/frame4.png") no-repeat 100% 0%;
   }
 }
 
@@ -589,7 +611,7 @@ button:active {
   align-items: center;
 
   /* prettier-ignore */
-  background: url(./assest/illustration-contact-form.svg) no-repeat 100% 90%;
+  background: url("./assest/illustration-contact-form.svg") no-repeat 100% 90%;
   padding: 2em 5em;
 }
 
@@ -699,7 +721,7 @@ footer::after {
     padding-bottom: 0;
 
     /* prettier-ignore */
-    background: url(./images/frame3.png) no-repeat 0% 90%, url(./images/illustration-2-contact-form-desktop@2x.png) no-repeat 30% 90%, url(./images/frame1.png) no-repeat 100% 90%;
+    background: url("./images/frame3.png") no-repeat 0% 90%, url("./images/illustration-2-contact-form-desktop@2x.png") no-repeat 30% 90%, url("./images/frame1.png") no-repeat 100% 90%;
   }
 
   .footer-form {
@@ -745,11 +767,16 @@ footer::after {
 }
 
 @media screen and (max-width: 767px) {
+  .headline h1,
+  .headline p .social-media {
+    margin-top: 100px;
+  }
+
   .about-myself {
     background:
-      url(./images/frame5.png) no-repeat 0% 15%,
-      url(./images/frame4.png) no-repeat 100% 0%;
-    background-size: 150px, 150px;
+      url("./images/frame5.png") no-repeat 0% 15%,
+      url("./images/frame4.png") no-repeat 100% 0%;
+    background-size: 130px, 130px;
   }
 
   .categorie-about-myself {
